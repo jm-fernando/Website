@@ -27,7 +27,7 @@ svg.append("text")
 
 
 // Parse the Data
-d3.csv(".js/data/mj_vs_sk_ppg.csv").then(function(data) {
+d3.csv("mj_vs_sk_ppg.csv").then(function(data) {
 
     // List of subgroups = header of the csv files = soil condition here
     const subgroups = data.columns.slice(1)
