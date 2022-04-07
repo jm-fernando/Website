@@ -73,8 +73,8 @@ d3.csv("mj_vs_sk_ortg.csv").then(function(data) {
         .selectAll("rect")
         .data(function(d) { return subgroups2.map(function(key) { return {key: key, value: d[key]}; }); })
         .join("rect")
-        .attr("x", d => xSubgroup2(d.key))
-        .attr("y", d => y2(d.value))
+        .attr("x2", d => xSubgroup2(d.key))
+        .attr("y2", d => y2(d.value))
         .attr("width2", xSubgroup2.bandwidth())
         .attr("height2", d => height2 - y2(d.value))
         .attr("fill", d => color2(d.key));
