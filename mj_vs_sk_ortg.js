@@ -1,14 +1,15 @@
+// set the dimensions and margins of the graph
 const margin2 = {top: 10, right: 30, bottom: 20, left: 50},
     width2 = 460 - margin2.left - margin2.right,
     height2 = 400 - margin2.top - margin2.bottom;
 
 // append the svg object to the body of the page
 const svg2 = d3.select("#page-3")
-    .append("svg2")
-    .attr("width2", width2 + margin.left + margin.right)
-    .attr("height2", height2 + margin.top + margin.bottom)
+    .append("svg")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
     .append("g")
-    .attr("transform",`translate(${margin.left},${margin.top})`);
+    .attr("transform",`translate(${margin2.left},${margin2.top})`);
 
 svg2.append("circle").attr("cx",80).attr("cy",60).attr("r", 6).style("fill", "#FFC72C")
 svg2.append("circle").attr("cx",220).attr("cy",60).attr("r", 6).style("fill", "#1D428A")
@@ -73,10 +74,10 @@ d3.csv("mj_vs_sk_ortg.csv").then(function(data) {
         .selectAll("rect")
         .data(function(d) { return subgroups2.map(function(key) { return {key: key, value: d[key]}; }); })
         .join("rect")
-        .attr("x2", d => xSubgroup2(d.key))
-        .attr("y2", d => y2(d.value))
-        .attr("width2", xSubgroup2.bandwidth())
-        .attr("height2", d => height2 - y2(d.value))
+        .attr("x", d => xSubgroup2(d.key))
+        .attr("y", d => y2(d.value))
+        .attr("width", xSubgroup2.bandwidth())
+        .attr("height", d => height2 - y2(d.value))
         .attr("fill", d => color2(d.key));
 
 
