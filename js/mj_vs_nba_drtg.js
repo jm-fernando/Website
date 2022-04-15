@@ -30,7 +30,7 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
     // List of groups = species here = value of the first column called group -> I show them on the X axis
     const groups6 = data.map(d => d.season)
 
-    console.log(groups)
+    console.log(groups6)
 
     // Add X axis
     const x6 = d3.scaleBand()
