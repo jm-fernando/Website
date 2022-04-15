@@ -38,14 +38,14 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .range([0, width5])
     svg5.append("g")
         .attr("transform", `translate(0, ${height5})`)
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x5));
 
     // Add Y axis
     const y5 = d3.scaleLinear()
         .domain([90, 110])
         .range([height5, 0 ]);
     svg5.append("g")
-        .call(d3.axisLeft().scale(y).ticks(5));
+        .call(d3.axisLeft().scale(y5).ticks(5));
 
     // Add the line
     svg5.append("path")
