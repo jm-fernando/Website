@@ -34,18 +34,18 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
 
     // Add X axis
     const x6 = d3.scaleBand()
-        .domain(groups)
+        .domain(groups6)
         .range([0, width])
     svg6.append("g")
         .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x6));
 
     // Add Y axis
     const y6 = d3.scaleLinear()
         .domain([110, 90])
         .range([height, 0 ]);
     svg6.append("g")
-        .call(d3.axisLeft().scale(y).ticks(5));
+        .call(d3.axisLeft().scale(y6).ticks(5));
 
     // Add the line
     svg6.append("path")
