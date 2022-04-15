@@ -15,14 +15,14 @@ const svg4 = d3.select("#page-2")
 svg4.append("text")
     .attr("transform", "translate(-10, -20)")
     .attr("x", 100)
-    .attr("y", 50)
+    .attr("y", 25)
     .attr("font-size", "18px")
     .text("Team PPG vs. League Average")
 
-svg4.append("circle").attr("cx",80).attr("cy",45).attr("r", 6).style("fill", "#FFC72C")
-svg4.append("circle").attr("cx",220).attr("cy",45).attr("r", 6).style("fill", "#1D428A")
-svg4.append("text").attr("x", 90).attr("y", 45).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
-svg4.append("text").attr("x", 230).attr("y", 45).text("NBA Average").style("font-size", "12px").attr("alignment-baseline","middle")
+svg4.append("circle").attr("cx",80).attr("cy",30).attr("r", 6).style("fill", "#FFC72C")
+svg4.append("circle").attr("cx",220).attr("cy",30).attr("r", 6).style("fill", "#1D428A")
+svg4.append("text").attr("x", 90).attr("y", 30).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
+svg4.append("text").attr("x", 230).attr("y", 30).text("NBA Average").style("font-size", "12px").attr("alignment-baseline","middle")
 
 //Read the data
 d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
