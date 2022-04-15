@@ -25,7 +25,7 @@ svg6.append("text").attr("x", 90).attr("y", 45).text("Coach Jackson").style("fon
 svg6.append("text").attr("x", 230).attr("y", 45).text("NBA Average").style("font-size", "12px").attr("alignment-baseline","middle")
 
 //Read the data
-d3.csv("data/mj_vs_nba_drtg.csv").then(function(data) {
+d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
 
     // List of groups = species here = value of the first column called group -> I show them on the X axis
     const groups6 = data.map(d => d.season)
