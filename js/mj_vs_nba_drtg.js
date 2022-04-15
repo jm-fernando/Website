@@ -54,8 +54,8 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         .attr("stroke", "#FFC72C")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-            .x(d => x(d.season))
-            .y(d => y(d.mjdrtg))
+            .x(d => x6(d.season))
+            .y(d => y6(d.mjdrtg))
         )
 
     // Add the line
@@ -65,8 +65,8 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         .attr("stroke", "#1D428A")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-            .x(d => x(d.season))
-            .y(d => y(d.nbadrtg))
+            .x(d => x6(d.season))
+            .y(d => y6(d.nbadrtg))
         )
 
 
@@ -75,8 +75,8 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         .selectAll("dot")
         .data(data)
         .join("circle")
-        .attr("cx", d => x(d.season))
-        .attr("cy", d => y(d.mjdrtg))
+        .attr("cx", d => x6(d.season))
+        .attr("cy", d => y6(d.mjdrtg))
         .attr("r", 5)
         .attr("fill", "#26282A")
 
@@ -85,8 +85,8 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         .selectAll("dot")
         .data(data)
         .join("circle")
-        .attr("cx", d => x(d.season))
-        .attr("cy", d => y(d.nbadrtg))
+        .attr("cx", d => x6(d.season))
+        .attr("cy", d => y6(d.nbadrtg))
         .attr("r", 5)
         .attr("fill", "#26282A")
 })
