@@ -54,8 +54,8 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .attr("stroke", "#FFC72C")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-            .x5(d => x5(d.season))
-            .y5(d => y5(d.mjortg))
+            .x(d => x5(d.season))
+            .y(d => y5(d.mjortg))
         )
 
     // Add the line
@@ -65,8 +65,8 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .attr("stroke", "#1D428A")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-            .x5(d => x5(d.season))
-            .y5(d => y5(d.nbaortg))
+            .x(d => x5(d.season))
+            .y(d => y5(d.nbaortg))
         )
 
 
