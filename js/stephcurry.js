@@ -56,7 +56,7 @@ function sc_update(selectedVar) {
             .attr("y2", function(d) { return sc_y(d[selectedVar]); })
             .attr("y3", function(d) { return sc_y(d[selectedVar]); })
             .attr("y4", function(d) { return sc_y(d[selectedVar]); })
-            .attr("stroke", "grey")
+            .attr("stroke", "#1D428A")
 
 
         // variable u: map data to existing circle
@@ -70,7 +70,7 @@ function sc_update(selectedVar) {
             .attr("cx", function(d) { return sc_x(d.SCSeason); })
             .attr("cy", function(d) { return sc_y(d[selectedVar]); })
             .attr("r", 8)
-            .attr("fill", "#69b3a2");
+            .attr("fill", "#FFC72C");
 
 
     })
