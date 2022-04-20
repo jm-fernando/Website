@@ -47,4 +47,28 @@ $(function() {
     .setPin('#dray-page')
     .addIndicators()
     .addTo(controller);
+
+    var containerScene7 = new ScrollMagic.Scene({
+        triggerElement: '#regseason',
+        duration: 10
+    })
+    .setPin('#regseason')
+    .addIndicators()
+    .addTo(controller);
+
+    var containerScene8 = new ScrollMagic.Scene({
+        triggerElement: '#fourfive-season',
+        duration: 10
+    })
+    .setPin('#fourfive-season')
+    .addIndicators()
+    .addTo(controller);
+
+    var containerSceneX = new ScrollMagic.Scene({
+        triggerElement: '#releasereports',
+        duration: 10
+    })
+    .setPin('#releasereports')
+    .addIndicators()
+    .addTo(controller);
 });

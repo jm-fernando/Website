@@ -148,6 +148,20 @@ html, body {
   font-family: 'Akshar', sans-serif;
 }
 
+.fourfive-season #fourfive-season-text {
+  margin: 0;
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  left: 800px;
+  right: 500px;
+  border: 10px solid black;
+  padding: 30px;
+  background: black;
+  opacity: 75%;
+  font-family: 'Akshar', sans-serif;
+}
+
 
 .release-reports {
   font-family: 'Akshar', sans-serif;
