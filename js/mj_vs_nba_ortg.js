@@ -17,12 +17,36 @@ svg5.append("text")
     .attr("x", 100)
     .attr("y", 22)
     .attr("font-size", "18px")
+    .style("fill", "#FFFFFF")
     .text("Team ORTG vs. League Average")
 
-svg5.append("circle").attr("cx",80).attr("cy",20).attr("r", 6).style("fill", "#FFC72C")
-svg5.append("circle").attr("cx",220).attr("cy",20).attr("r", 6).style("fill", "#1D428A")
-svg5.append("text").attr("x", 90).attr("y", 20).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
-svg5.append("text").attr("x", 230).attr("y", 20).text("NBA Average").style("font-size", "12px").attr("alignment-baseline","middle")
+svg5.append("circle")
+    .attr("cx",80)
+    .attr("cy",20)
+    .attr("r", 6)
+    .style("fill", "#FFC72C")
+
+svg5.append("circle")
+    .attr("cx",220)
+    .attr("cy",20)
+    .attr("r", 6)
+    .style("fill", "#1D428A")
+
+svg5.append("text")
+    .attr("x", 90)
+    .attr("y", 20)
+    .text("Coach Jackson")
+    .style("font-size", "12px")
+    .style("fill", "#FFFFFF")
+    .attr("alignment-baseline","middle")
+
+svg5.append("text")
+    .attr("x", 230)
+    .attr("y", 20)
+    .text("NBA Average")
+    .style("font-size", "12px")
+    .style("fill", "#FFFFFF")
+    .attr("alignment-baseline","middle")
 
 //Read the data
 d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
@@ -38,14 +62,16 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .range([0, width5])
     svg5.append("g")
         .attr("transform", `translate(0, ${height5})`)
-        .call(d3.axisBottom(x5));
+        .call(d3.axisBottom(x5))
+        .style("fill", "#FFFFFF");
 
     // Add Y axis
     const y5 = d3.scaleLinear()
         .domain([90, 110])
         .range([height5, 0 ]);
     svg5.append("g")
-        .call(d3.axisLeft().scale(y5).ticks(5));
+        .call(d3.axisLeft().scale(y5).ticks(5))
+        .style("fill", "#FFFFFF");
 
     // Add the line
     svg5.append("path")
