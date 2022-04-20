@@ -23,4 +23,28 @@ $(function() {
     .setPin('#page-5')
     .addIndicators()
     .addTo(controller);
+
+    var containerScene4 = new ScrollMagic.Scene({
+        triggerElement: '#steph-page',
+        duration: 10
+    })
+    .setPin('#steph-page')
+    .addIndicators()
+    .addTo(controller);
+
+    var containerScene5 = new ScrollMagic.Scene({
+        triggerElement: '#klay-page',
+        duration: 10
+    })
+    .setPin('#klay-page')
+    .addIndicators()
+    .addTo(controller);
+
+    var containerScene6 = new ScrollMagic.Scene({
+        triggerElement: '#dray-page',
+        duration: 10
+    })
+    .setPin('#dray-page')
+    .addIndicators()
+    .addTo(controller);
 });
