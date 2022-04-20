@@ -65,6 +65,46 @@ html, body {
   font-family: 'Akshar', sans-serif;
 }
 
+.page3 #page-3-title {
+  color: black;
+  font-family: 'Akshar', sans-serif;
+  font-size: 30px;
+}
+
+.page3 #page-3-text {
+  margin: 0;
+  position: absolute;
+  bottom: 550px;
+  color: white;
+  left: 750px;
+  right: 100px;
+  border: 10px solid black;
+  padding: 30px;
+  background: black;
+  opacity: 75%;
+  font-family: 'Akshar', sans-serif;
+}
+
+.page5 #page-5-title {
+  color: black;
+  font-family: 'Akshar', sans-serif;
+  font-size: 30px;
+}
+
+.page5 #page-5-text {
+  margin: 0;
+  position: absolute;
+  bottom: 180px;
+  color: white;
+  left: 900px;
+  right: 100px;
+  border: 10px solid black;
+  padding: 30px;
+  background: black;
+  opacity: 75%;
+  font-family: 'Akshar', sans-serif;
+}
+
 
 
 .release-reports {

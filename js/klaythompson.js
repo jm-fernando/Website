@@ -4,7 +4,7 @@ const kt_margin = {top: 30, right: 30, bottom: 70, left: 60},
     kt_height = 400 - kt_margin.top - kt_margin.bottom;
 
 // append the svg object to the body of the page
-const kt_svg = d3.select("#page-5-klay")
+const kt_svg = d3.select("#klay-page")
     .append("svg")
     .attr("width", kt_width + kt_margin.left + kt_margin.right)
     .attr("height", kt_height + kt_margin.top + kt_margin.bottom)

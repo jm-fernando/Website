@@ -4,7 +4,7 @@ const sc_margin = {top: 30, right: 30, bottom: 70, left: 60},
     sc_height = 400 - sc_margin.top - sc_margin.bottom;
 
 // append the svg object to the body of the page
-const sc_svg = d3.select("#page-5-steph")
+const sc_svg = d3.select("#steph-page")
     .append("svg")
     .attr("width", sc_width + sc_margin.left + sc_margin.right)
     .attr("height", sc_height + sc_margin.top + sc_margin.bottom)
