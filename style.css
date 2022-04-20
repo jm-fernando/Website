@@ -42,11 +42,11 @@ html, body {
 }
 
 .page2 {
-  background: black;
+  background: white;
 }
 
 .page2 #page-2-title {
-  color: white;
+  color: black;
   font-family: 'Akshar', sans-serif;
   font-size: 30px;
 }
@@ -60,16 +60,9 @@ html, body {
   right: 100px;
   border: 10px solid black;
   padding: 30px;
-  background: #1D428A;
+  background: black;
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
-}
-
-.page2 #page-2-js {
-  border: 10px white;
-  padding: 30px;
-  background: white;
-  opacity: 75%;
 }
 
 
