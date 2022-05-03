@@ -9,6 +9,14 @@ $(function() {
     .addTo(controller);
 
     var containerScene2 = new ScrollMagic.Scene({
+        triggerElement: '#foreword',
+        duration: 10
+    })
+    .setPin('#foreword')
+    //.addIndicators()
+    .addTo(controller);
+
+    var containerScene3 = new ScrollMagic.Scene({
         triggerElement: '#page-3',
         duration: 10
     })
@@ -16,7 +24,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene3 = new ScrollMagic.Scene({
+    var containerScene4 = new ScrollMagic.Scene({
         triggerElement: '#page-5',
         duration: 10
     })
@@ -24,7 +32,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene4 = new ScrollMagic.Scene({
+    var containerScene5 = new ScrollMagic.Scene({
         triggerElement: '#steph-page',
         duration: 10
     })
@@ -32,7 +40,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene5 = new ScrollMagic.Scene({
+    var containerScene6 = new ScrollMagic.Scene({
         triggerElement: '#klay-page',
         duration: 10
     })
@@ -40,7 +48,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene6 = new ScrollMagic.Scene({
+    var containerScene7 = new ScrollMagic.Scene({
         triggerElement: '#dray-page',
         duration: 10
     })
@@ -48,7 +56,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene7 = new ScrollMagic.Scene({
+    var containerScene8 = new ScrollMagic.Scene({
         triggerElement: '#regseason',
         duration: 10
     })

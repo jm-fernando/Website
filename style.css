@@ -39,22 +39,46 @@ html, body {
   background: black;
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
+  font-size: 36px;
+}
+
+.foreword #foreword-img {
+  margin: 50px;
+}
+
+.foreword #foreword-text {
+  position: absolute;
+  bottom: -400px;
+  color: white;
+  left: 900px;
+  right: 80px;
+  border: 10px solid black;
+  padding: 30px;
+  background: black;
+  opacity: 75%;
+  font-family: 'Akshar', sans-serif;
+  font-size: 20px;
 }
 
 .page2 {
   background: white;
 }
 
+.page2 #page-2-img {
+  margin: 50px;
+}
+
 .page2 #page-2-title {
   color: black;
   font-family: 'Akshar', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
+  text-align: center;
 }
 
 .page2 #page-2-text {
   margin: 0;
   position: absolute;
-  bottom: 650px;
+  bottom: 600px;
   color: white;
   left: 900px;
   right: 100px;
@@ -63,12 +87,18 @@ html, body {
   background: black;
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
+  font-size: 22px;
+}
+
+.page3 #page-3-img {
+  margin: 50px;
 }
 
 .page3 #page-3-title {
   color: black;
   font-family: 'Akshar', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .page3 #page-3-text {
@@ -76,19 +106,25 @@ html, body {
   position: absolute;
   bottom: 550px;
   color: white;
-  left: 750px;
+  left: 900px;
   right: 100px;
   border: 10px solid black;
   padding: 30px;
   background: black;
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
+  font-size: 22px;
 }
 
 .page5 #page-5-title {
   color: black;
   font-family: 'Akshar', sans-serif;
-  font-size: 45px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.page5 #page-5-img {
+  margin: 50px;
 }
 
 .page5 #page-5-text {
@@ -106,6 +142,9 @@ html, body {
   font-size: 20px;
 }
 
+.steph-page #steph-page-img {
+  margin: 50px;
+}
 
 .steph-page #steph-page-text {
   margin: 0;
