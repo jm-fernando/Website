@@ -161,6 +161,16 @@ html, body {
   font-size: 20px;
 }
 
+.steph-page #steph-page-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.klay-page #klay-page-img {
+  margin: 50px;
+}
+
 .klay-page #klay-page-text {
   margin: 0;
   position: absolute;
@@ -174,6 +184,21 @@ html, body {
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
   font-size: 20px;
+}
+
+.klay-page #klay-page-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.klay-page #klay-page-js {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.dray-page #dray-page-img {
+  margin: 50px;
 }
 
 .dray-page #dray-page-text {
@@ -191,6 +216,12 @@ html, body {
   font-size: 20px;
 }
 
+.dray-page #dray-page-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fourfive-season #fourfive-season-text {
   margin: 0;
   position: absolute;
@@ -206,6 +237,11 @@ html, body {
   font-size: 18px;
 }
 
+.fourfive-season #fourfive-season-js {
+  margin: 50px;
+}
+
+
 .fivesix-season #fivesix-season-text {
   margin: 0;
   position: absolute;
@@ -219,6 +255,10 @@ html, body {
   opacity: 75%;
   font-family: 'Akshar', sans-serif;
   font-size: 18px;
+}
+
+.fivesix-season #fivesix-season-js {
+  margin: 50px;
 }
 
 .sixseven-season #sixseven-season-text {
@@ -236,6 +276,10 @@ html, body {
   font-size: 18px;
 }
 
+.sixseven-season #sixseven-season-js {
+  margin: 50px;
+}
+
 .seveneight-season #seveneight-season-text {
   margin: 0;
   position: absolute;
@@ -251,6 +295,9 @@ html, body {
   font-size: 18px;
 }
 
+.seveneight-season #seveneight-season-js {
+  margin: 50px;
+}
 
 .release-reports {
   font-family: 'Akshar', sans-serif;
