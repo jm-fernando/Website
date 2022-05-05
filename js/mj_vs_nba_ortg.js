@@ -14,10 +14,10 @@ const svg5 = d3.select("#page-2")
 //Creating title for page
 svg5.append("text")
     .attr("transform", "translate(-10, -20)")
-    .attr("x", 100)
+    .attr("x", 60)
     .attr("y", 22)
     .attr("font-size", "18px")
-    .text("Team ORTG vs. League Average")
+    .text("Team Offensive Rating vs. League Average")
 
 svg5.append("circle")
     .attr("cx",80)

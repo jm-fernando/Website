@@ -19,10 +19,10 @@ svg2.append("text").attr("x", 230).attr("y", 60).text("Coach Kerr").style("font-
 //Creating title for page
 svg2.append("text")
     .attr("transform", "translate(-10, -20)")
-    .attr("x", 100)
+    .attr("x", 60)
     .attr("y", 50)
     .attr("font-size", "18px")
-    .text("Team ORTG in First 3 Seasons")
+    .text("Team Offensive Rating in First 3 Seasons")
 
 
 
