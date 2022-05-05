@@ -69,75 +69,6 @@ d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
             .y(d => y4(d.nbappg))
         )
 
-      // create a tooltip
-  var mjppg_tooltip = d3.select("#page-2")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
-
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var mjppg_mousemove = function(d) {
-    mjppg_tooltip
-      .style("opacity", 1)
-    d3.select(this)
-      .style("stroke", "black")
-      .style("opacity", 1)
-  }
-  var mjppg_mousemove = function(d) {
-    mjppg_tooltip
-      .html("Points per game for<br>this season: " + d.mjppg)
-      .style("left", (d3.mouse(this)[0]+70) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
-  }
-  var mjppg_mouseleave = function(d) {
-    mjppg_tooltip
-      .style("opacity", 0)
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 0.8)
-  }
-
-
-
-
-     // create a tooltip
-  var nbappg_tooltip = d3.select("#page-2")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
-
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var nbappg_mousemove = function(d) {
-    nbappg_tooltip
-      .style("opacity", 1)
-    d3.select(this)
-      .style("stroke", "black")
-      .style("opacity", 1)
-  }
-  var nbappg_mousemove = function(d) {
-    nbappg_tooltip
-      .html("The NBA average points for<br>this season: " + d.mjppg)
-      .style("left", (d3.mouse(this)[0]+70) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
-  }
-  var nbappg_mousemove = function(d) {
-    nbappg_tooltip
-      .style("opacity", 0)
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 0.8)
-  }
-
 
     // Add the points
     svg4.append("g")
@@ -148,9 +79,6 @@ d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
         .attr("cy", d => y4(d.mjppg))
         .attr("r", 5)
         .attr("fill", "#26282A")
-        .on("mjppg_mouseover", mjppg_mouseover)
-        .on("mjppg_mousemove", mjppg_mousemove)
-        .on("mjppg_mouseleave", mjppg_mouseleave)
 
     // Add the points
     svg4.append("g")
@@ -161,7 +89,4 @@ d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
         .attr("cy", d => y4(d.nbappg))
         .attr("r", 5)
         .attr("fill", "#26282A")
-        .on("nbappg_mouseover", nbappg_mouseover)
-        .on("nbappg_mouseover", nbappg_mouseover)
-        .on("nbappg_mouseover", nbappg_mouseover)
     })
