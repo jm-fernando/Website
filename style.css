@@ -165,7 +165,61 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
+
+.scpts {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.scpts:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.scast {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.scast:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.scstl {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.scstl:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.sctpt {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.sctpt:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
 
 .klay-page #klay-page-img {
   margin: 50px;
