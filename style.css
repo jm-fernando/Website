@@ -246,10 +246,58 @@ html, body {
   align-items: center;
 }
 
-.klay-page #klay-page-js {
-  width: 30%;
-  margin: 0 auto;
+.ktpts {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
 }
+
+.ktpts:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.ktast {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.ktast:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.kttrb {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.kttrb:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.kttpp {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.kttpp:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
 
 .dray-page #dray-page-img {
   margin: 50px;
@@ -274,6 +322,58 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dgast {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.dgast:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.dgtrb {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.dgtrb:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.dgstl {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.dgstl:hover {
+  background-color: #1D428A;
+  color: white;
+}
+
+.dgblk {
+  font-family: 'Akshar', sans-serif;
+  background-color: #FFC72C;
+  padding: 10px 24px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.dgblk:hover {
+  background-color: #1D428A;
+  color: white;
 }
 
 .fourfive-season #fourfive-season-text {
