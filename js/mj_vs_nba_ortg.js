@@ -1,12 +1,12 @@
 // set the dimensions and margins of the graph
-const margin5 = {top: 10, right: 30, bottom: 30, left: 60},
+const margin5 = {top: 10, right: -600, bottom: 30, left: 600},
     width5 = 460 - margin5.left - margin5.right,
     height5 = 400 - margin5.top - margin5.bottom;
 
 // append the svg object to the body of the page
 const svg5 = d3.select("#page-2")
     .append("svg")
-    .attr("width", width5 + margin5.left + margin5.right)
+    .attr("width", width5 + margin5.left + margin5.right + 1200)
     .attr("height", height5 + margin5.top + margin5.bottom)
     .append("g")
     .attr("transform", `translate(${margin5.left},${margin5.top})`);
