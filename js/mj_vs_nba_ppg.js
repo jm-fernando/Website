@@ -25,6 +25,12 @@ svg4.append("circle").attr("cx",220).attr("cy",20).attr("r", 6).style("fill", "#
 svg4.append("text").attr("x", 90).attr("y", 20).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
 svg4.append("text").attr("x", 230).attr("y", 20).text("NBA Average").style("font-size", "12px").attr("alignment-baseline","middle")
 
+//Creating tooltip
+const mjvsnbappg_tooltip = d3.select("#page-2")
+    .append("mjvsnbappg_tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 //Read the data
 d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
 
@@ -80,6 +86,23 @@ d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
         .attr("cy", d => y4(d.mjppg))
         .attr("r", 5)
         .attr("fill", "#26282A")
+        .on("mouseover", (event, d) => {
+            mjvsnbappg_tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            mjvsnbappg_tooltip.html(`${d.mjppg}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", _ => {
+            mjvsnbappg_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("mousemove", event => {
+            mjvsnbappg_tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+        })
 
     // Add the points for NBA
     svg4.append("g")
@@ -90,4 +113,21 @@ d3.csv("js/data/mj_vs_nba_ppg.csv").then(function(data) {
         .attr("cy", d => y4(d.nbappg))
         .attr("r", 5)
         .attr("fill", "#26282A")
+        .on("mouseover", (event, d) => {
+            mjvsnbappg_tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            mjvsnbappg_tooltip.html(`${d.nbappg}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", _ => {
+            mjvsnbappg_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("mousemove", event => {
+            mjvsnbappg_tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+        })
     })

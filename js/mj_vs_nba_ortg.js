@@ -46,6 +46,12 @@ svg5.append("text")
     .style("font-size", "12px")
     .attr("alignment-baseline","middle")
 
+//Creating tooltip
+const mjvsnbaortg_tooltip = d3.select("#page-2")
+    .append("mjvsnbaortg_tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 //Read the data
 d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
 
@@ -101,6 +107,23 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .attr("cy", d => y5(d.mjortg))
         .attr("r", 5)
         .attr("fill", "#26282A")
+        .on("mouseover", (event, d) => {
+            mjvsnbaortg_tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            mjvsnbaortg_tooltip.html(`${d.mjortg}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", _ => {
+            mjvsnbaortg_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("mousemove", event => {
+            mjvsnbaortg_tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+        })
 
     // Add the points for NBA
     svg5.append("g")
@@ -111,4 +134,21 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .attr("cy", d => y5(d.nbaortg))
         .attr("r", 5)
         .attr("fill", "#26282A")
+        .on("mouseover", (event, d) => {
+            mjvsnbaortg_tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            mjvsnbaortg_tooltip.html(`${d.nbaortg}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", _ => {
+            mjvsnbaortg_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("mousemove", event => {
+            mjvsnbaortg_tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+        })
 })
