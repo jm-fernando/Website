@@ -17,6 +17,12 @@ svg3.append("circle").attr("cx",220).attr("cy",60).attr("r", 6).style("fill", "#
 svg3.append("text").attr("x", 90).attr("y", 60).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
 svg3.append("text").attr("x", 230).attr("y", 60).text("Coach Kerr").style("font-size", "12px").attr("alignment-baseline","middle")
 
+//Creating tooltip
+const mjvsskdrtg_tooltip = d3.select("#page-3")
+    .append("mjvsskdrtg_tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 //Creating title for page
 svg3.append("text")
     .attr("transform", "translate(-10, -20)")
@@ -79,7 +85,24 @@ d3.csv("js/data/mj_vs_sk_drtg.csv").then(function(data) {
         .attr("y", d => y3(d.value))
         .attr("width", xSubgroup3.bandwidth())
         .attr("height", d => height3 - y3(d.value))
-        .attr("fill", d => color3(d.key));
+        .attr("fill", d => color3(d.key))
+        .on("mouseover", (event, d) => {
+            mjvsskdrtg_tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            mjvsskdrtg_tooltip.html(`${d.value}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", _ => {
+            mjvsskdrtg_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("mousemove", event => {
+            mjvsskdrtg_tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+        });
 
 
 
