@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-const sc_margin = {top: 30, right: 30, bottom: 70, left: 60},
+const sc_margin = {top: 30, right: -450, bottom: 70, left: 350},
     sc_width = 650 - sc_margin.left - sc_margin.right,
     sc_height = 400 - sc_margin.top - sc_margin.bottom;
 
