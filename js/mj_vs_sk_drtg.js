@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-const margin3 = {top: 10, right: -900, bottom: 20, left: 900},
+const margin3 = {top: 10, right: -100, bottom: 20, left: 100},
     width3 = 460 - margin3.left - margin3.right,
     height3 = 400 - margin3.top - margin3.bottom;
 
