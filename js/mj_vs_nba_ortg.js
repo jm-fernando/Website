@@ -1,9 +1,9 @@
-// set the dimensions and margins of the graph
-const margin5 = {top: 10, right: -300, bottom: 30, left: 300},
+//Setting the dimensions and margins of the graph
+const margin5 = {top: 10, right: -80, bottom: 30, left: 80},
     width5 = 460 - margin5.left - margin5.right,
     height5 = 400 - margin5.top - margin5.bottom;
 
-// append the svg object to the body of the page
+//Appending the svg object to the body of the page
 const svg5 = d3.select("#page-2")
     .append("svg")
     .attr("width", width5 + margin5.left + margin5.right + 1200)
@@ -19,6 +19,7 @@ svg5.append("text")
     .attr("font-size", "18px")
     .text("Team Offensive Rating vs. League Average")
 
+//Creating legend
 svg5.append("circle")
     .attr("cx",80)
     .attr("cy",20)
@@ -48,7 +49,7 @@ svg5.append("text")
 //Read the data
 d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
 
-    // List of groups = species here = value of the first column called group -> I show them on the X axis
+    //List of subgroups / header of the csv files
     const groups5 = data.map(d => d.season)
 
     console.log(groups5)
@@ -68,7 +69,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
     svg5.append("g")
         .call(d3.axisLeft().scale(y5).ticks(5));
 
-    // Add the line
+    //Add the line for MJ's progress
     svg5.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -79,7 +80,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
             .y(d => y5(d.mjortg))
         )
 
-    // Add the line
+    // Add the line for NBA's progress
     svg5.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -91,7 +92,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         )
 
 
-    // Add the points
+    // Add the points for MJ
     svg5.append("g")
         .selectAll("dot")
         .data(data)
@@ -101,7 +102,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .attr("r", 5)
         .attr("fill", "#26282A")
 
-    // Add the points
+    // Add the points for NBA
     svg5.append("g")
         .selectAll("dot")
         .data(data)

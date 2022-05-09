@@ -1,9 +1,9 @@
-// set the dimensions and margins of the graph
+//Setting the dimensions and margins of the graph
 const margin6 = {top: 10, right: 30, bottom: 30, left: 60},
     width6 = 460 - margin6.left - margin6.right,
     height6 = 400 - margin6.top - margin6.bottom;
 
-// append the svg object to the body of the page
+//Appending the svg object to the body of the page
 const svg6 = d3.select("#page-2")
     .append("svg")
     .attr("width", width6 + margin6.left + margin6.right)
@@ -19,6 +19,7 @@ svg6.append("text")
     .attr("font-size", "18px")
     .text("Team Defensive Rating vs. League Average")
 
+//Creating legend
 svg6.append("circle").attr("cx",80).attr("cy",20).attr("r", 6).style("fill", "#FFC72C")
 svg6.append("circle").attr("cx",220).attr("cy",20).attr("r", 6).style("fill", "#1D428A")
 svg6.append("text").attr("x", 90).attr("y", 20).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
@@ -27,7 +28,7 @@ svg6.append("text").attr("x", 230).attr("y", 20).text("NBA Average").style("font
 //Read the data
 d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
 
-    // List of groups = species here = value of the first column called group -> I show them on the X axis
+    //List of subgroups / header of the csv files
     const groups6 = data.map(d => d.season)
 
     console.log(groups6)
@@ -47,7 +48,7 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
     svg6.append("g")
         .call(d3.axisLeft().scale(y6).ticks(5));
 
-    // Add the line
+    // Add the line for MJ's progress
     svg6.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -58,7 +59,7 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
             .y(d => y6(d.mjdrtg))
         )
 
-    // Add the line
+    // Add the line for NBA's progress
     svg6.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -70,7 +71,7 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         )
 
 
-    // Add the points
+    // Add the points for MJ
     svg6.append("g")
         .selectAll("dot")
         .data(data)
@@ -80,7 +81,7 @@ d3.csv("js/data/mj_vs_nba_drtg.csv").then(function(data) {
         .attr("r", 5)
         .attr("fill", "#26282A")
 
-    // Add the points
+    // Add the points for NBA
     svg6.append("g")
         .selectAll("dot")
         .data(data)

@@ -1,9 +1,9 @@
-// set the dimensions and margins of the graph
+// Setting the dimensions and margins of the graph
 const margin2 = {top: 10, right: 30, bottom: 20, left: 50},
     width2 = 460 - margin2.left - margin2.right,
     height2 = 400 - margin2.top - margin2.bottom;
 
-// append the svg object to the body of the page
+// Appending the svg object to the body of the page
 const svg2 = d3.select("#page-3")
     .append("svg")
     .attr("width", width2 + margin2.left + margin2.right)
@@ -11,6 +11,7 @@ const svg2 = d3.select("#page-3")
     .append("g")
     .attr("transform",`translate(${margin2.left},${margin2.top})`);
 
+//Creating legend
 svg2.append("circle").attr("cx",80).attr("cy",60).attr("r", 6).style("fill", "#FFC72C")
 svg2.append("circle").attr("cx",220).attr("cy",60).attr("r", 6).style("fill", "#1D428A")
 svg2.append("text").attr("x", 90).attr("y", 60).text("Coach Jackson").style("font-size", "12px").attr("alignment-baseline","middle")
@@ -29,10 +30,10 @@ svg2.append("text")
 // Parse the Data
 d3.csv("js/data/mj_vs_sk_ortg.csv").then(function(data) {
 
-    // List of subgroups = header of the csv files = soil condition here
+    // List of subgroups / header of the csv files
     const subgroups2 = data.columns.slice(1)
 
-    // List of groups = species here = value of the first column called group -> I show them on the X axis
+    // List of groups / value of the first column called group
     const groups2 = data.map(d => d.season)
 
     console.log(groups2)
@@ -53,13 +54,13 @@ d3.csv("js/data/mj_vs_sk_ortg.csv").then(function(data) {
     svg2.append("g")
         .call(d3.axisLeft(y2));
 
-    // Another scale for subgroup position?
+    // Another scale for subgroup position
     const xSubgroup2 = d3.scaleBand()
         .domain(subgroups2)
         .range([0, x2.bandwidth()])
         .padding([0.1])
 
-    // color palette = one color per subgroup
+    // Color scale
     const color2 = d3.scaleOrdinal()
         .domain(subgroups2)
         .range(['#FFC72C','#1D428A'])
