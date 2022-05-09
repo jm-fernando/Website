@@ -24,6 +24,12 @@ const sc_y = d3.scaleLinear()
 const sc_yAxis = sc_svg.append("g")
     .attr("class", "myYaxis")
 
+// Initialize the tooltip
+const sc_tooltip = d3.select("#my_dataviz")
+    .append("sc_tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 
 // A function that create / update the plot for a given variable:
 function sc_update(selectedVar) {
@@ -62,6 +68,23 @@ function sc_update(selectedVar) {
         // variable u: map data to existing circle
         const sc_circ = sc_svg.selectAll("circle")
             .data(data)
+            .on("mouseover", (event, d) => {
+                sc_tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                sc_tooltip.html(`${d[selectedVar]}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", _ => {
+                sc_tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            })
+            .on("mousemove", event => {
+                sc_tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px")
+            })
         // update bars
         sc_circ
             .join("circle")
