@@ -6,7 +6,7 @@ const margin5 = {top: 10, right: 30, bottom: 30, left: 60},
 //Appending the svg object to the body of the page
 const svg5 = d3.select("#page-2")
     .append("svg")
-    .attr("width", width5 + margin5.left + margin5.right + 1200)
+    .attr("width", width5 + margin5.left + margin5.right)
     .attr("height", height5 + margin5.top + margin5.bottom)
     .append("g")
     .attr("transform", `translate(${margin5.left},${margin5.top})`);
