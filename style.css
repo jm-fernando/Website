@@ -376,50 +376,6 @@ html, body {
   color: white;
 }
 
-.sc_tooltip #tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-
-}
-
-.kt_tooltip #tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-
-}
-    
-.dg_tooltip #tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-
-} 
 
 .fourfive-season #fourfive-season-text {
   margin: 0;
@@ -497,6 +453,96 @@ html, body {
 .seveneight-season #seveneight-season-js {
   margin: 50px;
 }
+
+.mjvsnbappg_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+}
+
+.mjvsnbaortg_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+}
+
+.mjvsnbadrtg_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+}
+
+.sc_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+}
+
+.kt_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+}
+    
+.dg_tooltip  {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: 'Akshar', sans-serif;
+    background: gold;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+} 
 
 .release-reports {
   font-family: 'Akshar', sans-serif;
