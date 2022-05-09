@@ -1,12 +1,12 @@
 // set the dimensions and margins of the graph
-const dg_margin = {top: 30, right: 30, bottom: 70, left: 60},
+const dg_margin = {top: 30, right: -700, bottom: 70, left: 600},
     dg_width = 650 - dg_margin.left - dg_margin.right,
     dg_height = 400 - dg_margin.top - dg_margin.bottom;
 
 // append the svg object to the body of the page
 const dg_svg = d3.select("#dray-page")
     .append("svg")
-    .attr("width", dg_width + dg_margin.left + dg_margin.right)
+    .attr("width", dg_width + dg_margin.left + dg_margin.right + 800)
     .attr("height", dg_height + dg_margin.top + dg_margin.bottom)
     .append("g")
     .attr("transform", `translate(${dg_margin.left}, ${dg_margin.top})`);

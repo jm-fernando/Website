@@ -1,12 +1,12 @@
 // set the dimensions and margins of the graph
-const kt_margin = {top: 30, right: 30, bottom: 70, left: 60},
+const kt_margin = {top: 30, right: -700, bottom: 70, left: 600},
     kt_width = 650 - kt_margin.left - kt_margin.right,
     kt_height = 400 - kt_margin.top - kt_margin.bottom;
 
 // append the svg object to the body of the page
 const kt_svg = d3.select("#klay-page")
     .append("svg")
-    .attr("width", kt_width + kt_margin.left + kt_margin.right)
+    .attr("width", kt_width + kt_margin.left + kt_margin.right + 800)
     .attr("height", kt_height + kt_margin.top + kt_margin.bottom)
     .append("g")
     .attr("transform", `translate(${kt_margin.left}, ${kt_margin.top})`);
