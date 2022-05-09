@@ -376,7 +376,7 @@ html, body {
   color: white;
 }
 
-.sc_tooltip.tooltip {
+.sc_tooltip #tooltip {
     position: absolute;
     text-align: center;
     width: 60px;
@@ -391,7 +391,7 @@ html, body {
 
 }
 
-.kt_tooltip.tooltip {
+.kt_tooltip #tooltip {
     position: absolute;
     text-align: center;
     width: 60px;
@@ -406,7 +406,7 @@ html, body {
 
 }
     
-.dg_tooltip.tooltip {
+.dg_tooltip #tooltip {
     position: absolute;
     text-align: center;
     width: 60px;

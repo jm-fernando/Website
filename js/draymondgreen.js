@@ -47,23 +47,7 @@ function dg_update(selectedVar) {
         // variable u: map data to existing circle
         const dg_ln = dg_svg.selectAll(".myLine")
             .data(data)
-            .on("mouseover", (event, d) => {
-                dg_tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                dg_tooltip.html(`${d[selectedVar]}`)
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 20) + "px");
-            })
-            .on("mouseout", _ => {
-                dg_tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            })
-            .on("mousemove", event => {
-                dg_tooltip.style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 20) + "px")
-            })
+            
         // update lines
         dg_ln
             .join("line")
@@ -84,6 +68,23 @@ function dg_update(selectedVar) {
         // variable u: map data to existing circle
         const dg_circ = dg_svg.selectAll("circle")
             .data(data)
+            .on("mouseover", (event, d) => {
+                dg_tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                dg_tooltip.html(`${d[selectedVar]}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", _ => {
+                dg_tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            })
+            .on("mousemove", event => {
+                dg_tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px")
+            })
         // update bars
         dg_circ
             .join("circle")

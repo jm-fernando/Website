@@ -56,23 +56,7 @@ function kt_update(selectedVar) {
         // variable u: map data to existing circle
         const kt_ln = kt_svg.selectAll(".myLine")
             .data(data)
-            .on("mouseover", (event, d) => {
-                kt_tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                kt_tooltip.html(`${d[selectedVar]}`)
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 20) + "px");
-            })
-            .on("mouseout", _ => {
-                kt_tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            })
-            .on("mousemove", event => {
-                kt_tooltip.style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 20) + "px")
-            })
+            
         // update lines
         kt_ln
             .join("line")
@@ -93,6 +77,23 @@ function kt_update(selectedVar) {
         // variable u: map data to existing circle
         const kt_circ = kt_svg.selectAll("circle")
             .data(data)
+            .on("mouseover", (event, d) => {
+                kt_tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                kt_tooltip.html(`${d[selectedVar]}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", _ => {
+                kt_tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            })
+            .on("mousemove", event => {
+                kt_tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px")
+            })
         // update bars
         kt_circ
             .join("circle")
