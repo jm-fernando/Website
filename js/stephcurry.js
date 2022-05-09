@@ -6,7 +6,7 @@ const sc_margin = {top: 30, right: -450, bottom: 70, left: 350},
 // append the svg object to the body of the page
 const sc_svg = d3.select("#steph-page")
     .append("svg")
-    .attr("width", sc_width + sc_margin.left + sc_margin.right)
+    .attr("width", sc_width + sc_margin.left + sc_margin.right + 500)
     .attr("height", sc_height + sc_margin.top + sc_margin.bottom)
     .append("g")
     .attr("transform", `translate(${sc_margin.left}, ${sc_margin.top})`);
