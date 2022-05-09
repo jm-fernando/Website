@@ -24,6 +24,12 @@ const kt_y = d3.scaleLinear()
 const kt_yAxis = kt_svg.append("g")
     .attr("class", "myYaxis")
 
+// Initialize the tooltip
+const kt_tooltip = d3.select("#klay-page")
+    .append("kt_tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 //Creating title for page
 kt_svg.append("text")
     .attr("transform", "translate(-10, 290)")
@@ -50,6 +56,23 @@ function kt_update(selectedVar) {
         // variable u: map data to existing circle
         const kt_ln = kt_svg.selectAll(".myLine")
             .data(data)
+            .on("mouseover", (event, d) => {
+                kt_tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                kt_tooltip.html(`${d[selectedVar]}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", _ => {
+                kt_tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            })
+            .on("mousemove", event => {
+                kt_tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px")
+            })
         // update lines
         kt_ln
             .join("line")

@@ -25,7 +25,7 @@ const sc_yAxis = sc_svg.append("g")
     .attr("class", "myYaxis")
 
 // Initialize the tooltip
-const sc_tooltip = d3.select("#my_dataviz")
+const sc_tooltip = d3.select("#steph-page")
     .append("sc_tooltip")
     .attr("class", "tooltip")
     .style("opacity", 0);
