@@ -65,6 +65,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .domain(groups5)
         .range([0, width5])
     svg5.append("g")
+        .style("font", "14px times")
         .attr("transform", `translate(0, ${height5})`)
         .call(d3.axisBottom(x5));
 
@@ -73,6 +74,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         .domain([90, 110])
         .range([height5, 0 ]);
     svg5.append("g")
+        .style("font", "14px times")
         .call(d3.axisLeft().scale(y5).ticks(5));
 
     //Add the line for MJ's progress

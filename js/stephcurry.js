@@ -16,12 +16,14 @@ const sc_x = d3.scaleBand()
     .range([ 0, sc_width ])
     .padding(1);
 const sc_xAxis = sc_svg.append("g")
+    .style("font", "14px times")
     .attr("transform", `translate(0, ${sc_height})`)
 
 // Initialize the Y axis
 const sc_y = d3.scaleLinear()
     .range([ sc_height, 0]);
 const sc_yAxis = sc_svg.append("g")
+    .style("font", "14px times")
     .attr("class", "myYaxis")
 
 // Initialize the tooltip

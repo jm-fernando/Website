@@ -50,6 +50,7 @@ d3.csv("js/data/mj_vs_sk_ppg.csv").then(function(data) {
         .range([0, width])
         .padding([0.2])
     svg.append("g")
+        .style("font", "14px times")
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(x).tickSize(0));
 
@@ -58,6 +59,7 @@ d3.csv("js/data/mj_vs_sk_ppg.csv").then(function(data) {
         .domain([80, 130])
         .range([height, 20 ]);
     svg.append("g")
+        .style("font", "14px times")
         .call(d3.axisLeft(y));
 
     // Another scale for subgroup
