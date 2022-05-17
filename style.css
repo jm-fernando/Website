@@ -454,7 +454,7 @@ html, body {
   margin: 50px;
 }
 
-.mjvsnbappg_tooltip  {
+.mjvsnbappg_tooltip.tooltip  {
     position: absolute;
     text-align: center;
     width: 60px;
@@ -468,7 +468,7 @@ html, body {
     pointer-events: none;
 }
 
-.mjvsnbaortg_tooltip  {
+.mjvsnbaortg_tooltip.tooltip  {
     position: absolute;
     text-align: center;
     width: 60px;
@@ -482,7 +482,7 @@ html, body {
     pointer-events: none;
 }
 
-.mjvsnbadrtg_tooltip  {
+.mjvsnbadrtg_tooltip.tooltip  {
     position: absolute;
     text-align: center;
     width: 60px;
@@ -495,90 +495,6 @@ html, body {
     border-radius: 8px;
     pointer-events: none;
 }
-
-.mjvsskppg_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.mjvsskortg_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.mjvsskdrtg_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.sc_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.kt_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-    
-.dg_tooltip  {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    font-size: 20px;
-    font-family: 'Akshar', sans-serif;
-    background: gold;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-} 
 
 .release-reports {
   font-family: 'Akshar', sans-serif;
