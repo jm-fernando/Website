@@ -100,7 +100,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
         )
 
 
-    // Add the points for MJ
+    // Add the points for MJ and implement tooltip
     svg5.append("g")
         .selectAll("dot")
         .data(data)
@@ -127,7 +127,7 @@ d3.csv("js/data/mj_vs_nba_ortg.csv").then(function(data) {
                 .style("top", (event.pageY - 20) + "px")
         })
 
-    // Add the points for NBA
+    // Add the points for NBA and implement tooltip
     svg5.append("g")
         .selectAll("dot")
         .data(data)

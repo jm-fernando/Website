@@ -1,9 +1,9 @@
-// set the dimensions and margins of the graph
+//Set the dimensions and margins of the graph
 const kt_margin = {top: 30, right: -700, bottom: 70, left: 600},
     kt_width = 650 - kt_margin.left - kt_margin.right,
     kt_height = 400 - kt_margin.top - kt_margin.bottom;
 
-// append the svg object to the body of the page
+//Append the svg object to the body of the page
 const kt_svg = d3.select("#klay-page")
     .append("svg")
     .attr("width", kt_width + kt_margin.left + kt_margin.right + 800)
@@ -11,7 +11,7 @@ const kt_svg = d3.select("#klay-page")
     .append("g")
     .attr("transform", `translate(${kt_margin.left}, ${kt_margin.top})`);
 
-// Initialize the X axis
+//Initialize the X axis
 const kt_x = d3.scaleBand()
     .range([ 0, kt_width ])
     .padding(1);
@@ -19,20 +19,20 @@ const kt_xAxis = kt_svg.append("g")
     .style("font", "14px times")
     .attr("transform", `translate(0, ${kt_height})`)
 
-// Initialize the Y axis
+//Initialize the Y axis
 const kt_y = d3.scaleLinear()
     .range([ kt_height, 0]);
 const kt_yAxis = kt_svg.append("g")
     .style("font", "14px times")
     .attr("class", "myYaxis")
 
-// Initialize the tooltip
+//Initialize the tooltip
 const kt_tooltip = d3.select("#klay-page")
     .append("kt_tooltip")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-//Creating title for page
+//Creating side note for Klay's injuries
 kt_svg.append("text")
     .attr("transform", "translate(-10, 290)")
     .attr("x", 100)
@@ -41,25 +41,25 @@ kt_svg.append("text")
     .text("*Thompson did not play during the 2019-2020 and 2020-2021 seasons due to injury")
 
 
-// A function that create / update the plot for a given variable:
+//Creates / updates the plot for a given variable:
 function kt_update(selectedVar) {
 
-    // Parse the Data
+    //Parse the Data
     d3.csv("js/data/klaystats.csv").then(function(data) {
 
-        // X axis
+        //X axis
         kt_x.domain(data.map(function(d) { return d.KTSeason; }))
         kt_xAxis.transition().duration(1000).call(d3.axisBottom(kt_x))
 
-        // Add Y axis
+        //Y axis
         kt_y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
         kt_yAxis.transition().duration(1000).call(d3.axisLeft(kt_y));
 
-        // variable u: map data to existing circle
+        //Map data to existing circle
         const kt_ln = kt_svg.selectAll(".myLine")
             .data(data)
             
-        // update lines
+        //Update lines
         kt_ln
             .join("line")
             .attr("class", "myLine")
@@ -76,7 +76,7 @@ function kt_update(selectedVar) {
             .attr("stroke", "#1D428A")
 
 
-        // variable u: map data to existing circle
+        //Map data to existing circle and implement tooltip
         const kt_circ = kt_svg.selectAll("circle")
             .data(data)
             .on("mouseover", (event, d) => {
@@ -96,7 +96,8 @@ function kt_update(selectedVar) {
                 kt_tooltip.style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 20) + "px")
             })
-        // update bars
+
+        //Update bars
         kt_circ
             .join("circle")
             .transition()
@@ -111,5 +112,5 @@ function kt_update(selectedVar) {
 
 }
 
-// Initialize plot
+//Initialize plot
 kt_update('KTPTS')

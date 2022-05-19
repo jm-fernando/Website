@@ -73,9 +73,10 @@ d3.csv("js/data/mj_vs_sk_drtg.csv").then(function(data) {
         .domain(subgroups3)
         .range(['#FFC72C','#1D428A'])
 
-    //Show the bars
+    //Show the bars and implement tooltip
     svg3.append("g")
         .selectAll("g")
+        
         //Enter in data = loop group per group
         .data(data)
         .join("g")

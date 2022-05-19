@@ -1,9 +1,9 @@
-// set the dimensions and margins of the graph
+//Set the dimensions and margins of the graph
 const sc_margin = {top: 30, right: -700, bottom: 70, left: 600},
     sc_width = 650 - sc_margin.left - sc_margin.right,
     sc_height = 400 - sc_margin.top - sc_margin.bottom;
 
-// append the svg object to the body of the page
+//Append the svg object to the body of the page
 const sc_svg = d3.select("#steph-page")
     .append("svg")
     .attr("width", sc_width + sc_margin.left + sc_margin.right + 800)
@@ -11,7 +11,7 @@ const sc_svg = d3.select("#steph-page")
     .append("g")
     .attr("transform", `translate(${sc_margin.left}, ${sc_margin.top})`);
 
-// Initialize the X axis
+//Initialize the X axis
 const sc_x = d3.scaleBand()
     .range([ 0, sc_width ])
     .padding(1);
@@ -19,38 +19,39 @@ const sc_xAxis = sc_svg.append("g")
     .style("font", "14px times")
     .attr("transform", `translate(0, ${sc_height})`)
 
-// Initialize the Y axis
+//Initialize the Y axis
 const sc_y = d3.scaleLinear()
     .range([ sc_height, 0]);
 const sc_yAxis = sc_svg.append("g")
     .style("font", "14px times")
     .attr("class", "myYaxis")
 
-// Initialize the tooltip
+//Initialize the tooltip
 const sc_tooltip = d3.select("#steph-page")
     .append("sc_tooltip")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
 
-// A function that create / update the plot for a given variable:
+//Creates / updates the plot for a given variable:
 function sc_update(selectedVar) {
 
-    // Parse the Data
+    //Parse the Data
     d3.csv("js/data/currystats.csv").then(function(data) {
 
-        // X axis
+        //X axis
         sc_x.domain(data.map(function(d) { return d.SCSeason; }))
         sc_xAxis.transition().duration(1000).call(d3.axisBottom(sc_x))
 
-        // Add Y axis
+        //Y axis
         sc_y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
         sc_yAxis.transition().duration(1000).call(d3.axisLeft(sc_y));
 
-        // variable u: map data to existing circle
+        //Map data to existing circle
         const sc_ln = sc_svg.selectAll(".myLine")
             .data(data)
-        // update lines
+
+        //Update lines
         sc_ln
             .join("line")
             .attr("class", "myLine")
@@ -67,7 +68,7 @@ function sc_update(selectedVar) {
             .attr("stroke", "#1D428A")
 
 
-        // variable u: map data to existing circle
+        //Map data to existing circle and implement tooltip
         const sc_circ = sc_svg.selectAll("circle")
             .data(data)
             .on("mouseover", (event, d) => {
@@ -87,7 +88,8 @@ function sc_update(selectedVar) {
                 sc_tooltip.style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 20) + "px")
             })
-        // update bars
+
+        //Update bars
         sc_circ
             .join("circle")
             .transition()
@@ -102,5 +104,5 @@ function sc_update(selectedVar) {
 
 }
 
-// Initialize plot
+//Initialize plot
 sc_update('SCPTS')

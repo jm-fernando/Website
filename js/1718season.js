@@ -1,6 +1,7 @@
+//Setting drawGraph function
 var drawGraph = function(){
 
-
+    //Set values for color and for how many symbols are highlighted as wins and losses
     var percentNumber = 58;
     var courtFill = "#ff0000";
     var courtFillActive = "#1D428A";
@@ -9,7 +10,7 @@ var drawGraph = function(){
     const width = 450;
     const height = 450;
 
-    //create an svg with width and height
+    //Appending the svg object to the body of the page
     var svg = d3.select('#seveneight-season')
         .append('svg')
         .attr("width", 550)
@@ -17,10 +18,12 @@ var drawGraph = function(){
         .style('background-color', svgBackgroundColor);
 
 
+    //Appending the svg object to the body of the page
     var court = svg.append("defs")
         .append("g")
         .attr("id","courtIcon");
 
+    //Appending the court image
     court
         .append("path")
         .attr("d","M0,79.175v353.65h512V79.175H0z\n" +
@@ -34,11 +37,12 @@ var drawGraph = function(){
             "\t\t\tc41.411-3.996,73.897-38.984,73.897-81.425s-32.486-77.428-73.897-81.425V95.01h232.247V132.218z")
         .attr("transform", "translate(0,0) scale(.055)");
 
+    //Setting number or rows, columns, and cells to achieve desired number (82)
     var numRows = 10;
     var numCols = 11;
     var numCells = 82;
 
-    //x and y axis scales
+    //X and Y axis scales
     var y = d3.scaleBand()
         .range([0,400])
         .domain(d3.range(numRows));
@@ -47,10 +51,10 @@ var drawGraph = function(){
         .range([0, 400])
         .domain(d3.range(numCols));
 
-    //the data is just an array of numbers for each cell in the grid
+    //Data is array of numbers for each cell in the grid
     data = d3.range(numCells);
 
-    //container to hold the grid
+    //Container to hold the grid
     var container = svg.append("g")
         .attr("transform", "translate(70,70)");
 
@@ -68,5 +72,5 @@ var drawGraph = function(){
 
 }
 
-//call function to draw the graph
+//Call function to draw the graph
 drawGraph();
