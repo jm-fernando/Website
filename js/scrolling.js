@@ -1,6 +1,7 @@
 $(function() {
     var controller = new ScrollMagic.Controller();
-    var containerScene = new ScrollMagic.Scene({
+
+    var titleScene = new ScrollMagic.Scene({
         triggerElement: '#title',
         duration: 10
     })
@@ -8,7 +9,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene2 = new ScrollMagic.Scene({
+    var forewordScene = new ScrollMagic.Scene({
         triggerElement: '#foreword',
         duration: 10
     })
@@ -16,7 +17,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene3 = new ScrollMagic.Scene({
+    var mjvsnbaScene = new ScrollMagic.Scene({
         triggerElement: '#page-3',
         duration: 10
     })
@@ -24,7 +25,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene4 = new ScrollMagic.Scene({
+    var mjvsskScene = new ScrollMagic.Scene({
         triggerElement: '#page-5',
         duration: 10
     })
@@ -32,7 +33,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene5 = new ScrollMagic.Scene({
+    var stephScene = new ScrollMagic.Scene({
         triggerElement: '#steph-page',
         duration: 10
     })
@@ -40,7 +41,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene6 = new ScrollMagic.Scene({
+    var klayScene = new ScrollMagic.Scene({
         triggerElement: '#klay-page',
         duration: 10
     })
@@ -48,7 +49,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene7 = new ScrollMagic.Scene({
+    var drayScene = new ScrollMagic.Scene({
         triggerElement: '#dray-page',
         duration: 10
     })
@@ -56,13 +57,6 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene8 = new ScrollMagic.Scene({
-        triggerElement: '#regseason',
-        duration: 10
-    })
-    .setPin('#regseason')
-    //.addIndicators()
-    .addTo(controller);
 
     var containerScene9 = new ScrollMagic.Scene({
         triggerElement: '#fourfive-season',
