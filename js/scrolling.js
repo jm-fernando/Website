@@ -58,7 +58,7 @@ $(function() {
     .addTo(controller);
 
 
-    var containerScene9 = new ScrollMagic.Scene({
+    var fourfiveScene = new ScrollMagic.Scene({
         triggerElement: '#fourfive-season',
         duration: 10
     })
@@ -66,7 +66,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene10 = new ScrollMagic.Scene({
+    var fivesixScene = new ScrollMagic.Scene({
         triggerElement: '#fivesix-season',
         duration: 10
     })
@@ -74,7 +74,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene11 = new ScrollMagic.Scene({
+    var sixsevenScene = new ScrollMagic.Scene({
         triggerElement: '#sixseven-season',
         duration: 10
     })
@@ -82,7 +82,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerScene12 = new ScrollMagic.Scene({
+    var seveneightScene = new ScrollMagic.Scene({
         triggerElement: '#seveneight-season',
         duration: 10
     })
@@ -90,7 +90,7 @@ $(function() {
     //.addIndicators()
     .addTo(controller);
 
-    var containerSceneX = new ScrollMagic.Scene({
+    var releasereportScene = new ScrollMagic.Scene({
         triggerElement: '#releasereports',
         duration: 10
     })
